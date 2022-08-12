@@ -1,38 +1,198 @@
-.App {
-  text-align: center;
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-size: 1rem;
+  font-family: 'Kumbh Sans', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li {
+  list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Header */
+.header {
   display: flex;
-  flex-direction: column;
+  padding: 0.3rem .3rem .7rem;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  font-weight: 700;
+  margin-right: auto;
+  font-size: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu {
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  margin: .8rem 1rem 0rem;
+}
+
+.hamburger-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  background-color: hsl(0, 0%, 100%);
+  border: 1px solid #000;
+  padding: 1rem;
+  width: 60%;
+  z-index: 3;
+}
+
+.overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+.hamburger-links {
+  margin-top: 1rem;
+}
+
+.hamburger-links li {
+  margin: 1rem 0;
+}
+
+/* Main */
+
+
+/* slider */
+.btn-wrapper {
+  position: absolute;
+  top: 37%;
+  background-color: hsl(0, 0%, 100%);
+  padding: .5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.next {
+  right: 1rem;
+}
+
+.prev {
+  left: 1rem;
+}
+
+/* price */
+.price {
+  display: flex;
+}
+
+span {
+  display: block;
+  padding: 1rem;
+  padding: 0;
+}
+
+.new-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.old-price {
+  margin-left: auto;
+  color: hsl(220, 14%, 75%);
+  text-decoration: line-through;
+}
+
+.discount {
+  background-color: hsl(25, 100%, 94%);
+  color: hsl(26, 100%, 55%);
+}
+
+/* amount */
+.amount {
+  background-color: hsl(223, 64%, 98%);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-weight: 700;
+}
+
+.plus {
+  cursor: pointer;
+}
+
+.minus {
+  cursor: pointer;
+}
+
+.addCartBtn {
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 1rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(26, 100%, 55%);
+}
+
+
+
+
+/* Cart */
+.cart-btn {
+  cursor: pointer;
+}
+
+.cart-overlay {
+  position: absolute;
+  background-color: #fff;
+  top: 7%;
+  left: 0;
+  width: 100%;
+  min-height: 30%;
+  padding: 1rem;
+  z-index: 1;
+}
+
+.cart-header {
+  font-weight: 700;
+}
+
+.cart-info {
+  height: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+}
+
+.delete-btn {
+  width: 3rem;
+}
+
+.amount-in-cart {
+  position: absolute;
+  top: 0;
+  right: 3rem;
+  background-color: hsl(26, 100%, 55%);
+  color: #fff;
+  padding: 0 .5rem;
+  border-radius: 50%;
+}
+
+.checkout {
+  width: 100%;
+  padding: 1rem;
+  background-color: hsl(26, 100%, 55%);
+  color: #fff;
+  border: none;
 }
