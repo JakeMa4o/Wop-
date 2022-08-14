@@ -36,7 +36,9 @@ function Main({setCartItem, setAmount, amount}) {
   }
 
   function decrease () {
-    if(amount === 0) {
+    if(amount === 1) {
+      setCartItem({});
+      setAmount(0);
       return
     }
     setAmount(prevVal => prevVal - 1);
