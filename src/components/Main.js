@@ -61,17 +61,17 @@ function Main({setCartItem, setAmount, amount}) {
   return (
     <div>
       <Slider images={images} />
-      <div className="info">
+      <div className="main-info container">
         <h3 className="company-name">Sneaker company</h3>
         <h1 className="brand-name">Fall Limited Edition Sneakers</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus deserunt voluptates repellat deleniti praesentium reiciendis sit, totam aliquam delectus optio quo ea quasi quidem asperiores placeat laboriosam odit. A, quo!</p>
+        <p className="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus deserunt voluptates repellat deleniti praesentium reiciendis sit, totam aliquam delectus optio quo ea quasi quidem asperiores placeat laboriosam odit. A, quo!</p>
         <div className="price">
           <span className="new-price">${item1.price}.00</span> <span className="discount">50%</span> <span className="old-price">$250.00</span>
         </div>
         <div className="amount">
           <Minus className="minus" onClick={decrease}/>{amount}<Plus className="plus" onClick={increase}/>
         </div>
-        <button className="addCartBtn" onClick={addToCart}><CartSvg />Add to cart</button>
+        <button className="addCartBtn" onClick={addToCart}><CartSvg style={{fill: "#fff"}} />Add to cart</button>
       </div>
     </div>
   )

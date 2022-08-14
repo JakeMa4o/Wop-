@@ -44,7 +44,7 @@ function Header({cartItem, setCartItem, amount, setAmount}) {
       </div>
       <div className="cart">
         <CartSvg className="cart-btn" onClick={toggleCart}/>
-        { cartIsOpen && <div className="cart-overlay">
+        { cartIsOpen && <div className="cart-overlay container">
           <Cart item={cartItem} setCartItem={setCartItem} amount={amount} setAmount={setAmount}/>
         </div>}
         <div className="amount-in-cart">
