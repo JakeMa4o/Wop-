@@ -19,7 +19,7 @@ function Slider({images}) {
 
   return (
     <div className="slider">
-      <LazyLoadImage className="slider-img" src={images[currentIndex].url} alt="prdouct1" style={{ maxWidth: "100%" }} />
+      <LazyLoadImage className="slider-img" src={images[currentIndex].url} alt="prdouct1" style={{ maxWidth: "100%", maxHeight: "100%" }} />
       <div className="btn-wrapper next">
         <Next onClick={goToNext} />
       </div>

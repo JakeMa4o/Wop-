@@ -80,9 +80,13 @@ img {
 
 
 /* slider */
+.slider {
+  /* height: 20rem; */
+}
+
 .btn-wrapper {
   position: absolute;
-  top: 37%;
+  top: 24%;
   background-color: hsl(0, 0%, 100%);
   padding: .5rem;
   border-radius: 50%;
@@ -100,6 +104,7 @@ img {
 /* price */
 .price {
   display: flex;
+  margin: 1rem 0;
 }
 
 span {
@@ -111,6 +116,7 @@ span {
 .new-price {
   font-size: 1.5rem;
   font-weight: 700;
+  padding-right: 1rem;
 }
 
 .old-price {
@@ -122,6 +128,9 @@ span {
 .discount {
   background-color: hsl(25, 100%, 94%);
   color: hsl(26, 100%, 55%);
+  padding: 0.3rem .5rem;
+  border-radius: .3rem;
+  font-weight: 700;
 }
 
 /* amount */
@@ -131,6 +140,7 @@ span {
   justify-content: space-between;
   padding: 1rem;
   font-weight: 700;
+  border-radius: .5rem;
 }
 
 .plus {
@@ -149,6 +159,8 @@ span {
   font-weight: 700;
   color: hsl(0, 0%, 100%);
   background-color: hsl(26, 100%, 55%);
+  margin: 1rem 0;
+  border-radius: .5rem;
 }
 
 
@@ -163,14 +175,14 @@ span {
   top: 8%;
   left: 2.6%;
   width: 100%;
-  min-height: 30%;
+  min-height: 25%;
   padding: 1rem;
   z-index: 1;
   border-radius: .6rem;
 }
 
 .cart-body {
-  padding: 2rem 0;
+  padding: 2rem 0 1rem;
 }
 
 .cart-img {
@@ -198,9 +210,9 @@ span {
   top: 0;
   right: 3rem;
   background-color: hsl(26, 100%, 55%);
-  color: #fff;
   padding: 0 .5rem;
   border-radius: 50%;
+  color: #fff;
 }
 
 .checkout {
@@ -209,6 +221,7 @@ span {
   background-color: hsl(26, 100%, 55%);
   color: #fff;
   border: none;
+  border-radius: .5rem;
 }
 
 .empty-cart {
@@ -232,3 +245,4 @@ span {
 .brand-name, .description, .price {
   padding: .5rem 0;
 }
+

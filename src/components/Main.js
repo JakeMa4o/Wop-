@@ -71,7 +71,7 @@ function Main({setCartItem, setAmount, amount}) {
         <div className="amount">
           <Minus className="minus" onClick={decrease}/>{amount}<Plus className="plus" onClick={increase}/>
         </div>
-        <button className="addCartBtn" onClick={addToCart}><CartSvg style={{fill: "#fff"}} />Add to cart</button>
+        <button className="addCartBtn" onClick={addToCart}><CartSvg style={{fill: "#fff", marginRight: "1rem"}} />Add to cart</button>
       </div>
     </div>
   )
