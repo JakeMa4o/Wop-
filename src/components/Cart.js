@@ -17,8 +17,8 @@ function Cart({ item, setCartItem, amount, setAmount }) {
           <div className="cart-info">
             <img className="cart-img" src={item.url} alt={item.alt} />
             <div className="price-description">
-              <p>{item.brandName}</p>
-              <p>{item.price}.00 x {amount} <span style={{fontWeight: "700", display: "inline"}}>{item.price * amount}.00</span></p>
+              <p>{item.brandName.substring(0, 20)}...</p>
+              <p>{item.price}.00 x {amount} <span style={{fontWeight: "700", display: "inline", color: "#000"}}>{item.price * amount}.00</span></p>
             </div>
             <div className="delete-btn">
             <Delete style={{cursor: "pointer"}} onClick={deleteItem} />

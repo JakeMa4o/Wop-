@@ -6,7 +6,7 @@ import product4 from "../assets/image-product-4.jpg";
 import Slider from "./Slider";
 import { ReactComponent as Minus } from "../assets/icon-minus.svg";
 import { ReactComponent as Plus } from "../assets/icon-plus.svg";
-import { ReactComponent as CartSvg } from "../assets/icon-cart.svg";
+import { ReactComponent as CartSvgWhite } from "../assets/icon-cart-white.svg";
 
 // import all
 const images = [
@@ -59,19 +59,19 @@ function Main({setCartItem, setAmount, amount}) {
   }
 
   return (
-    <div>
+      <div className="main body-wrapper">
       <Slider images={images} />
       <div className="main-info container">
         <h3 className="company-name">Sneaker company</h3>
         <h1 className="brand-name">Fall Limited Edition Sneakers</h1>
-        <p className="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus deserunt voluptates repellat deleniti praesentium reiciendis sit, totam aliquam delectus optio quo ea quasi quidem asperiores placeat laboriosam odit. A, quo!</p>
+        <p className="description">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstands everything the weather can offer.</p>
         <div className="price">
           <span className="new-price">${item1.price}.00</span> <span className="discount">50%</span> <span className="old-price">$250.00</span>
         </div>
         <div className="amount">
           <Minus className="minus" onClick={decrease}/>{amount}<Plus className="plus" onClick={increase}/>
         </div>
-        <button className="addCartBtn" onClick={addToCart}><CartSvg style={{fill: "#fff", marginRight: "1rem"}} />Add to cart</button>
+        <button className="addCartBtn" onClick={addToCart}><CartSvgWhite style={{marginRight: "1rem"}} />Add to cart</button>
       </div>
     </div>
   )

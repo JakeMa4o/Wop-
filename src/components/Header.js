@@ -23,7 +23,8 @@ function Header({cartItem, setCartItem, amount, setAmount}) {
   }
 
   return (
-    <header className="header">
+    <header className="header body-wrapper">
+    {/* Mobile nav */}
       <div className="menu">
       {!menu ?  <div className="hamburger">
           <Menu onClick={openTab} style={{cursor: "pointer"}}/>
@@ -41,6 +42,16 @@ function Header({cartItem, setCartItem, amount, setAmount}) {
       </div>
       <div className="logo">
         sneakers
+      </div>
+      {/* Laptop nav */}
+      <div className="laptop-nav">
+      <ul className="laptop-links">
+            <li>Collections</li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
       </div>
       <div className="cart">
         <CartSvg className="cart-btn" onClick={toggleCart}/>

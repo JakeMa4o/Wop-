@@ -34,7 +34,6 @@ img {
 
 .logo {
   font-weight: 700;
-  margin-right: auto;
   font-size: 2rem;
 }
 
@@ -76,12 +75,22 @@ img {
   margin: 1rem 0;
 }
 
+.laptop-nav {
+  display: none;
+}
+
+
+
 /* Main */
 
+.horizontal-ruler {
+  display: none;
+}
 
 /* slider */
 .slider {
-  /* height: 20rem; */
+  max-height: 18rem;
+  overflow: hidden;
 }
 
 .btn-wrapper {
@@ -149,6 +158,7 @@ span {
 
 .minus {
   cursor: pointer;
+  margin-top: .5rem;
 }
 
 .addCartBtn {
@@ -162,9 +172,17 @@ span {
   margin: 1rem 0;
   border-radius: .5rem;
 }
+/* .addCartBtn svg path {
+  fill: "#fff" !important;
+} */
 
 
 /* Cart */
+.cart {
+  color: hsl(219, 9%, 45%);
+  margin-left: auto;
+}
+
 .cart-btn {
   cursor: pointer;
 }
@@ -192,6 +210,7 @@ span {
 .cart-header {
   font-weight: 700;
   margin-bottom: 1rem;
+  color: #000;
 }
 
 .cart-info {
@@ -222,6 +241,7 @@ span {
   color: #fff;
   border: none;
   border-radius: .5rem;
+  font-weight: 700;
 }
 
 .empty-cart {
@@ -246,3 +266,53 @@ span {
   padding: .5rem 0;
 }
 
+
+/* Laptop 1440 Media Query */
+
+
+@media screen and (min-width: 1440px){
+  /* header */
+  .menu {
+    display: none;
+  }
+  .laptop-nav {
+    display: block;
+  }
+  .laptop-links {
+    display: flex;
+    margin-left: 1rem;
+  }
+  .laptop-links li {
+    margin: 0 1rem;
+    font-weight: 700;
+    color: hsl(219, 9%, 45%);;
+  }
+  .avatar img {
+    height: 3rem !important;
+    width: 3rem !important;
+  }
+  .header {
+    padding: 2rem;
+  }
+  /* main */
+  .btn-wrapper {
+    display: none;
+    justify-content: center;
+  }
+  .main {
+    display: flex;
+    padding: 5rem 10rem;
+  }
+  .body-wrapper {
+    max-width: 80%;
+    margin: auto;
+  }
+  .header {
+    box-shadow: 0px 2px hsl(223, 64%, 98%);
+  }
+  .slider {
+    overflow: visible;
+  }
+
+  /* add container or wrapper around whole page so ur HR will be cut by padding like in the image */
+}
